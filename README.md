@@ -7,7 +7,10 @@ This repository contains code and data accompanying the publication "Digital Ser
 
 ## Repository Content:
 This repository contains the following code scripts:
-* TBD
+* `twitter-data-extraction.ipynb`
+* `run_hawkes_pwl.py`
+* `plot-contours.ipynb`
+* `plot-social-media-dynamics-deletion.ipynb`
 
 The following data and plots are also available:
 * `data/twitter-climatescam-hashtag.csv` – contains tweet ids from Twitter associated with the hashtag #climatescam 
