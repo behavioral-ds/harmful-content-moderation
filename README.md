@@ -16,15 +16,15 @@ The following data and plots are also available:
 * `data/twitter-climatescam-hashtag.csv` – contains tweet ids from Twitter associated with the hashtag #climatescam 
 * `data/twitter-americafirst-hashtag.csv` – contains tweet ids from Twitter associated with the hashtag #americafirst or #americansfirst
 
-Fig. 1 - 
+Fig. 1 - Social Media Dynamics as Self-Exciting Point Process.
 
 ![Plot](plots/delete-plot.png)
 
-Fig. 2 (a) - Reaction time $\Delta$ to achieve harm reduction of $\chi=20$%.
+Fig. 2 (a) - Reaction time $\Delta$ to achieve harm reduction of $\chi=20$\%.
 
 ![Plot](plots/delta-chi20p-deletion.png)
 
-Fig. 2 (b) - Harm reduction $\chi$ when content is removed within $\Delta=24$ hours
+Fig. 2 (b) - Harm reduction $\chi$ when content is removed within $\Delta=24$ hours.
 
 ![Plot](plots/chi-delta24hour-deletion.png)
 
