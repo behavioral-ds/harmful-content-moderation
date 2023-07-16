@@ -14,7 +14,7 @@ This repository contains the following code scripts:
 
 The following data and plots are also available:
 * `data/twitter-climatescam-hashtag.csv` – contains tweet ids from Twitter associated with the hashtag #climatescam 
-* `data/twitter-americafirst-hashtag.csv` – contains tweet ids from Twitter associated with the hashtag #americafirst or #americansfirst
+* `data/twitter-americafirst-hashtag.csv` – contains tweet ids from Twitter associated with the hashtag #americafirst or #americansfirst<br>
 Note: These are dehydrated datasets compiled in compliance with the Twitter Terms of Service. Please refer to further documentation on hydration to obtain the underlying data.
 * `plots/delete-plot.pdf` - Fig. 1 - Social Media Dynamics as Self-Exciting Point Process.
 * `plots/delta-chi20p-deletion.pdf` - Fig. 2 (a) - Reaction time $\Delta$ to achieve harm reduction of $\chi=20$\%.
