@@ -17,10 +17,15 @@ The following data and plots are also available:
 * `data/twitter-americafirst-hashtag.csv` – contains tweet ids from Twitter associated with the hashtag #americafirst or #americansfirst
 
 Fig. 1 - 
+
 ![Plot](plots/delete-plot.png)
-Fig. 2 (a) - Reaction time $\Delta$ to achieve harm reduction of $\chi=20%$.
+
+Fig. 2 (a) - Reaction time $\Delta$ to achieve harm reduction of $\chi=20\%$.
+
 ![Plot](plots/delta-chi20p-deletion.png)
+
 Fig. 2 (b) - 
+
 ![Plot](plots/chi-delta24hour-deletion.png)
 
 ## License:
