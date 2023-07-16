@@ -8,7 +8,7 @@ This repository contains code and data accompanying the publication "The Effecti
 ## Repository Content:
 This repository contains the following code scripts:
 * `scripts/twitter-data-extraction.ipynb`: A notebook used to extract data via the Twitter API. For information on accessing Twitter API for academic research, please refer to the official Twitter documentation on [academic research access](https://developer.twitter.com/en/products/twitter-api/academic-research).
-* `scripts/run_hawkes_pwl.py`: A script that fits the data starting from `data/twitter-<topic>-hashtag.csv`. For further information on fitting Hawkes processes, refer to [evently](https://github.com/behavioral-ds/evently), [tick](https://github.com/X-DataInitiative/tick), [hawkesbook](https://github.com/Pat-Laub/hawkesbook) or other packages. 
+* `scripts/run_hawkes_pwl.py`: A script that fits the data starting from `data/twitter-<topic>-hashtag.csv`  by utilizing the functions in `scripts/fit_hawkes_pwl.py`. For further information on fitting Hawkes processes, refer to [evently](https://github.com/behavioral-ds/evently), [tick](https://github.com/X-DataInitiative/tick), [hawkesbook](https://github.com/Pat-Laub/hawkesbook) or other packages. 
 * `scripts/plot-contours.ipynb`: A notebook that postprocesses the fits, constructs contour plots, and illustrates the fitted data.
 * `scripts/plot-social-media-dynamics-deletion.ipynb`: A notebook used to plot Fig. 1.
 * `scripts/dsa_functions.py`: Additional functions for reading and analyzing data.
