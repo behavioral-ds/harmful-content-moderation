@@ -16,5 +16,9 @@ The following data and plots are also available:
 * `data/twitter-climatescam-hashtag.csv` – contains tweet ids from Twitter associated with the hashtag #climatescam 
 * `data/twitter-americafirst-hashtag.csv` – contains tweet ids from Twitter associated with the hashtag #americafirst or #americansfirst
 
+![Plot](plots/delete-plot.png)
+![Plot](plots/delta-chi20p-deletion.png)
+![Plot](plots/chi-delta24hour-deletion.png)
+
 ## License:
 Both the dataset and the code in this repository are distributed under the General Public License v3 (GPLv3) license. You can find a copy of the license in the LICENSE file included in this repository. If you have any inquiries regarding licensing or any other questions, please feel free to reach out to us at Marian-Andrei@rizoiu.eu.
