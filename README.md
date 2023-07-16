@@ -20,7 +20,7 @@ Fig. 1 -
 
 ![Plot](plots/delete-plot.png)
 
-Fig. 2 (a) - Reaction time $\Delta$ to achieve harm reduction of $\chi=20\%$.
+Fig. 2 (a) - Reaction time $\Delta$ to achieve harm reduction of $\chi=20$%.
 
 ![Plot](plots/delta-chi20p-deletion.png)
 
