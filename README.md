@@ -1,6 +1,6 @@
 # dsa-content-moderation
 
-This repository contains code and data accompanying the publication "Digital Services Act: Estimate the Effectiveness of Moderating Harmful Online Content"
+This repository contains code and data accompanying the publication "The Effectiveness of Moderating Harmful Online Content"
 
 ## Reference:
 * TBD
