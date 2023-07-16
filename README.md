@@ -20,11 +20,11 @@ Fig. 1 -
 
 ![Plot](plots/delete-plot.png)
 
-Fig. 2 (a) - Reaction time $\Delta$ to achieve harm reduction of $\chi=20\%$.
+Fig. 2 (a) - Reaction time $\Delta$ to achieve harm reduction of $\chi=20%$.
 
 ![Plot](plots/delta-chi20p-deletion.png)
 
-Fig. 2 (b) - 
+Fig. 2 (b) - Harm reduction $\chi$ when content is removed within $\Delta=24$ hours
 
 ![Plot](plots/chi-delta24hour-deletion.png)
 
