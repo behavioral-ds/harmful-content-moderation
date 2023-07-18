@@ -1,4 +1,4 @@
-# dsa-content-moderation
+# The Effectiveness of Moderating Harmful Online Content
 
 This repository contains code and data accompanying the publication "The Effectiveness of Moderating Harmful Online Content".
 
@@ -34,4 +34,4 @@ Fig. 2 (b) - Harm reduction $\chi$ when content is removed within $\Delta=24$ ho
 ![Plot](plots/chi-delta24hour-deletion.png)
 
 ## License:
-Both the dataset and the code in this repository are distributed under the General Public License v3 (GPLv3) license. You can find a copy of the license in the LICENSE file included in this repository. If you have any inquiries regarding licensing or any other questions, please feel free to reach out to us at Marian-Andrei@rizoiu.eu.
+The dataset and the code in this repository are distributed under the General Public License v3 (GPLv3) license. You can find a copy of the license in the LICENSE file included in this repository. If you have any questions regarding licensing or any other questions, please feel free to contact us at Marian-Andrei@uts.edu.au .
