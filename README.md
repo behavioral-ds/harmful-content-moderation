@@ -1,6 +1,6 @@
-# The Effectiveness of Moderating Harmful Online Content
+# The effectiveness of moderating harmful online content
 
-This repository contains code and data accompanying the publication "The Effectiveness of Moderating Harmful Online Content".
+This repository contains code and data accompanying the publication "The effectiveness of moderating harmful online content".
 
 ## Reference:
 * TBD
