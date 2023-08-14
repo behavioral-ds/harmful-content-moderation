@@ -7,14 +7,14 @@ def n_star(
     beta: float,
     c: int,
     kappa: float,
-    theta: float
+    gamma: float
 ):
     """
         Branching factor ($n^{*}$)
     """
     
     try:
-        kernel_term = 1 / (theta * c ** theta)
+        kernel_term = 1 / (gamma * c ** gamma)
         influence_term = (alpha - 1)/(alpha - beta - 1)
         n = kappa * influence_term * kernel_term
     except:
@@ -24,17 +24,17 @@ def n_star(
 
 def tau_life(
     c: float,
-    theta: float
+    gamma: float
 ):
     """
         Content half-life ($\tau_{1/2}$)
     """
-    tau_half = c * (2 ** (1 / theta) - 1)
+    tau_half = c * (2 ** (1 / gamma) - 1)
     
     return tau_half
 
 def calc_chi_powerlaw(
-    theta: float,
+    gamma: float,
     n: float,
     delta_: float,
     c: int
@@ -43,14 +43,14 @@ def calc_chi_powerlaw(
         Harm ($\chi$)
     """
     
-    n_delta = n * (1 - (c ** theta) * (c + delta_) ** (- theta))
+    n_delta = n * (1 - (c ** gamma) * (c + delta_) ** (- gamma))
     
     chi = (n - n_delta) / (1 - n_delta)
     
     return chi
 
 def calc_chi_powerlaw_abs(
-    theta: float,
+    gamma: float,
     n: float,
     delta_: float,
     c: int
@@ -59,14 +59,14 @@ def calc_chi_powerlaw_abs(
         Harm ($\chi$)
     """
     
-    n_delta = n * (1 - (c ** theta) * (c + delta_) ** (- theta))
+    n_delta = n * (1 - (c ** gamma) * (c + delta_) ** (- gamma))
     
     chi = 1 / (1 - n) - 1 / (1 - n_delta)
     
     return chi
 
 def calc_delta_powerlaw(
-    theta: float,
+    gamma: float,
     n: float,
     chi_: float,
     c: int
@@ -77,12 +77,12 @@ def calc_delta_powerlaw(
     
     try:
         
-        term1 = 1 / (n * c ** theta)
+        term1 = 1 / (n * c ** gamma)
         
         term2 = (chi_ * (1 - n)) / (1 - chi_)
         
         # 604800 - 7 * 24 * 60 * 60 - 1 week
-        delta = min(max(0, (term1 * term2) ** (-(1 / theta)) - c), 604800)
+        delta = min(max(0, (term1 * term2) ** (-(1 / gamma)) - c), 604800)
         
     except:
         delta = None
@@ -111,7 +111,7 @@ def read_in_dfs(
         
         df['beta'] = df.apply(lambda x: x['p_fit'][0], axis=1)
         df['kappa'] = df.apply(lambda x: x['p_fit'][1], axis=1)
-        df['theta'] = df.apply(lambda x: x['p_fit'][2], axis=1)
+        df['gamma'] = df.apply(lambda x: x['p_fit'][2], axis=1)
 
         # Remove entries where the random guess and the fit are identical
         df['g_p'] = df.apply(lambda x: all(x['guess'] == x['p_fit']), axis=1)
@@ -128,18 +128,18 @@ def read_in_dfs(
                                          x['beta'], 
                                          c,
                                          x['kappa'],
-                                         x['theta']), 
+                                         x['gamma']), 
                                 axis=1)
         
         df['chi'] = df.apply(lambda x: calc_chi_powerlaw(
-                                         x['theta'], 
+                                         x['gamma'], 
                                          x['n_star'],
                                          delta_,
-                                         x['theta']), 
+                                         x['gamma']), 
                              axis=1)
         
         df['delta'] = df.apply(lambda x: calc_delta_powerlaw(
-                                         x['theta'], 
+                                         x['gamma'], 
                                          x['n_star'],
                                          chi_,
                                          c), 
@@ -150,7 +150,7 @@ def read_in_dfs(
         print(f'Dataset: {i+1} - shape (stationary): {df.shape}')
 
         # Calculate content half-life
-        df['tau_'] = df.apply(lambda x: tau_life(c, x['theta']), axis=1)
+        df['tau_'] = df.apply(lambda x: tau_life(c, x['gamma']), axis=1)
         
         df = df.dropna().reset_index(drop=True)
         
@@ -172,9 +172,9 @@ def plot_distr(
         axs[1].boxplot(df.kappa.values)
         axs[1].set_ylim([0, 1])
         axs[1].set_xticks([1], [r'$\kappa$'], fontsize=14)
-        axs[2].boxplot(df.theta.values)
+        axs[2].boxplot(df.gamma.values)
         axs[2].set_ylim([0, 1])
-        axs[2].set_xticks([1], [r'$\theta$'], fontsize=14)
+        axs[2].set_xticks([1], [r'$\gamma$'], fontsize=14)
         axs[3].boxplot(df.n_star.values)
         axs[3].set_ylim([0, 1])
         axs[3].set_xticks([1], [r'$n^{*}$'], fontsize=14)

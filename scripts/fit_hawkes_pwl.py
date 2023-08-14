@@ -24,9 +24,9 @@ def powerlaw(
     beta: float,
     c: float,
     kappa: float,
-    theta: float
+    gamma: float
 ):
-    return kappa * (m ** beta) * (tau + c) ** (-(1 + theta))
+    return kappa * (m ** beta) * (tau + c) ** (-(1 + gamma))
 
 def fit_MLE_UHP_pwl(
     events: np.ndarray,
@@ -103,7 +103,7 @@ def loglikelihood_UHP_pwl(
     
     beta = x[0]
     kappa = x[1]
-    theta = x[2]
+    gamma = x[2]
     
     log_sum = 0
     kern_sum = 0
@@ -114,13 +114,13 @@ def loglikelihood_UHP_pwl(
                                  kappa=kappa, 
                                  beta=beta,
                                  c=c,
-                                 theta=theta
+                                 gamma=gamma
                                 ))
 
         log_sum += np.log(mu + kern_sum)
 
-    sub_term1 = (c ** (-theta)) / theta
-    sub_term2 = (T + c - events) ** (-theta) / theta
+    sub_term1 = (c ** (-gamma)) / gamma
+    sub_term2 = (T + c - events) ** (-gamma) / gamma
     integral_kern_sum = kappa * np.dot((marks ** beta), (sub_term1 - sub_term2))
 
     return -(log_sum - mu * T - integral_kern_sum)
