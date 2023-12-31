@@ -2,18 +2,20 @@
 
 This repository contains code and data accompanying the publication "The effectiveness of moderating harmful online content".
 
-## Reference:
-* @article{
-doi:10.1073/pnas.2307360120,
-author = {Philipp J. Schneider  and Marian-Andrei Rizoiu },
-title = {The effectiveness of moderating harmful online content},
-journal = {Proceedings of the National Academy of Sciences},
-volume = {120},
-number = {34},
-pages = {e2307360120},
-year = {2023},
-doi = {10.1073/pnas.2307360120}
+## Reference
+
+```bibtex
+@article{doi:10.1073/pnas.2307360120,
+  author = {Philipp J. Schneider and Marian-Andrei Rizoiu},
+  title = {The effectiveness of moderating harmful online content},
+  journal = {Proceedings of the National Academy of Sciences},
+  volume = {120},
+  number = {34},
+  pages = {e2307360120},
+  year = {2023},
+  doi = {10.1073/pnas.2307360120}
 }
+```
 
 ## Repository Content:
 This repository contains the following code scripts:
